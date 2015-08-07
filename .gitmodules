@@ -1,6 +1,3 @@
 [submodule "assembly"]
 	path = assembly
 	url = git@github.com:D4prog/learn-assembly.git
-[submodule "learn"]
-	path = learn
-	url = git@github.com:D4prog/learn.git
