@@ -1,0 +1,5 @@
+markdown:    redcarpet
+redcarpet:
+  extensions: [tables,autolink,strikethrough]
+
+baseurl:      /learn
