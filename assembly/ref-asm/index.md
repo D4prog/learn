@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: assembly
 ---
 # 逆引きアセンブラ
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: assembly
 ---
 # Makefile
 ```MAKEFILE

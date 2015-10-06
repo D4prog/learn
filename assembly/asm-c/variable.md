@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: assembly
 ---
 # 変数
 C言語においての変数はメモリ上に予約された領域と、そこに付けられた名前で扱われます。（※[メモリ](memory.html)も参照のこと）

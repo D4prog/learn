@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: assembly
 ---
 
 # 制御構造

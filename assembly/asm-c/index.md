@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: assembly
 ---
 # アセンブラ言語とC言語
 
