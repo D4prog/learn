@@ -18,13 +18,14 @@ void init(void) {
 }
 ```
 
-```ASM
+```
     .equ    ARRAY_SIZE, 16
 
     .section    .text
 init:
     mov.b   #7, r0l
     mov.b   r0l,    #buffer+40
+    rts
     
     .section    .bss
 global_array:
