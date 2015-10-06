@@ -1,5 +1,15 @@
+# Site settings
+title: D4prog.github.io/learn
+email: 413834@m.mie-u.ac.jp
+description: >
+  そろそろ何かをのこしたい
+baseurl:      /learn
+url: "http://D4prog.github.io"
+twitter_username: D4prog
+github_username:  D4prog
+
+# Build settings
+
 markdown:    redcarpet
 redcarpet:
   extensions: [tables,autolink,strikethrough]
-
-baseurl:      /learn

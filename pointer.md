@@ -1,5 +1,4 @@
 ---
-title: pointer
 layout: page
 ---
 # pointer

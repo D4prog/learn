@@ -1,5 +1,4 @@
 ---
-title: stack
 layout: page
 ---
 # stack
