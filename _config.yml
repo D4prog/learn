@@ -12,4 +12,4 @@ github_username:  D4prog
 
 markdown:    redcarpet
 redcarpet:
-  extensions: [tables,autolink,strikethrough]
+  extensions: [tables,autolink,strikethrough,with_toc_data]
