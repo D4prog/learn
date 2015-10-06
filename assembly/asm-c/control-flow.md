@@ -20,13 +20,13 @@ do {
 ```
 i -> r0l として考えます。
 
-<pre class="prettyprint">
+```
     mov.b   #10,r0l
 loop:
     ...
     dec.b   r0l
     bne     loop
-</pre>
+```
 (そもそもなぜ最初に do-while を持ち出すかといえば、これがいちばんアセンブラで書いたときに覚えやすく短いコードになるからです。)
 
 解説： `dec.b r0l` でループ変数の減算と[CCR](../essence/ccr.html)のセットを行い、ゼロでないときにラベル `loop` に戻っています。
@@ -47,7 +47,7 @@ if (a == b) {
 a -> e0, b -> e1 とすると、
 
 ```
-    cmp.e   e0,e1
+    cmp.w   e0,e1
     bne     if_end
     ...
 if_end:
@@ -69,7 +69,7 @@ if (a == b) {
 ```
 
 ```
-    cmp.e   e0,e1
+    cmp.w   e0,e1
     bne     if_else
     ...(1)
     bra     if_end
