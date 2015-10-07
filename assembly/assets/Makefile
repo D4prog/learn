@@ -13,10 +13,10 @@ main.coff: start.o main.o lcd.o sci.o dump.o \	# 材料
 .S.o:
 	h8300-hms-as $^ -o $@
 
-.PHONY: clean install
+.PHONY: clean write
 
 clean:
 	rm -rf *.o *.mot *.coff
 
-install: main.mot
+write: main.mot
 	sudo h8write -3052 main.mot /dev/ttyUSB0 1>&2

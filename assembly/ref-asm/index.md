@@ -13,6 +13,6 @@ layout: assembly
   + [文字以外を画面に表示したい]
 * アセンブラにない構造を実現したい
   + [配列](array.html)
-  + [構造体](struct.html)
+  + [構造体]
 * ボタンwith処理
 * LED明るさ多段階
