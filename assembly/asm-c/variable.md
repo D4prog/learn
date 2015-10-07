@@ -20,7 +20,7 @@ int cursor_x;
 cursor_x:   .long   0       ;; ここで指定した初期値は無意味。
 ```
 
-## ローカル変数
+## ローカル変数(簡単)
 C言語でのローカル変数の実現方式にあたるものは用意されていないので、[レジスタ](../essence/register)を使います。
 
 ```C
@@ -41,3 +41,28 @@ sample_subroutine:
     pop.l   er0             ;; er0の元の値をスタックから復元
     rts
 ```
+
+## ローカル変数(複雑)
+自分で適当なレジスタをスタックポインタとして用いて、スタックマシンとしてローカル変数を作ります。
+
+```C
+int i = 1;
+char c = '\n';
+```
+
+```ASM
+    push.w  r6
+    mov.w   r7,r6
+    subs    #2,r7
+    subs    #2,r7
+    mov.w   #1,r2
+    mov.w   r2,@(-4,r6)
+    mov.b   #10,r2l
+    mov.b   r2l,@(-1,r6)
+    adds    #2,r7
+    adds    #2,r7
+    pop.w   r6
+    rts
+```
+
+(h8300-hms-gcc に -S オプションを渡してコードを吐かせてみたもの。)
