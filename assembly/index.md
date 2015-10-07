@@ -27,5 +27,6 @@ title: アセンブラ
 
 ## 前提
 * C言語の必要最低限の読み書きができること
-* 表記は『[H8アセンブラ入門](https://books.google.co.jp/books?id=9dd1xBNFRpAC)』にならう
 * 特に何も記載しない場合、環境は H8/300H 3052F ＵＳＢ開発セット，アセンブラは h8300-hms-as を用いるものとする
+* 語句の表記は『[H8アセンブラ入門](https://books.google.co.jp/books?id=9dd1xBNFRpAC)』にならう
+* コードの表記は `h8300-hms-as` が受け付ける形式にならう
