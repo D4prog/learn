@@ -59,8 +59,7 @@ char c = '\n';
     mov.w   r2,@(-4,r6)
     mov.b   #10,r2l
     mov.b   r2l,@(-1,r6)
-    adds    #2,r7
-    adds    #2,r7
+    mov.w   r6,r7
     pop.w   r6
     rts
 ```
