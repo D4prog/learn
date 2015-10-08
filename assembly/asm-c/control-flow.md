@@ -4,7 +4,7 @@ layout: assembly
 
 # 制御構造
 [コンディションコードレジスタ(CCR)](../essence/ccr.html)、
-および[分岐命令一覧](../essence/ccr.html#よく使う分岐命令)も参照のこと
+および[よく使う分岐命令](../essence/ccr.html#よく使う分岐命令)も参照のこと
 
 * [do-while を用いたループ](#do-while-を用いたループ)
 * [if](#if)
