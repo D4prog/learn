@@ -3,7 +3,8 @@ layout: assembly
 ---
 
 # 制御構造
-[コンディションコードレジスタ(CCR)](../essence/ccr.html)も参照のこと
+[コンディションコードレジスタ(CCR)](../essence/ccr.html)、
+および[分岐命令一覧](../essence/ccr.html#よく使う分岐命令)も参照のこと
 
 * [do-while を用いたループ](#do-while-を用いたループ)
 * [if](#if)
@@ -20,7 +21,7 @@ do {
 ```
 i -> r0l として考えます。
 
-```
+```ASM
     mov.b   #10,r0l
 loop:
     ...
@@ -46,7 +47,7 @@ if (a == b) {
 
 a -> e0, b -> e1 とすると、
 
-```
+```ASM
     cmp.w   e0,e1
     bne     if_end
     ...
@@ -68,7 +69,7 @@ if (a == b) {
 }
 ```
 
-```
+```ASM
     cmp.w   e0,e1
     bne     if_else
     ...(1)
@@ -85,4 +86,39 @@ if_end:
 
 ## while
 
+```C
+while (a == b) {
+  ...
+}
+```
+
+```ASM
+
+while_start:
+    cmp.w   e0,e1       ; e0 と e1 を比較して
+    bne     while_end   ; 等しくないとき while_end へ飛ぶ
+    ...
+    bra while_start     ; 無条件で while_start へ飛ぶ
+while_end:
+
+```
+
+
 ## for
+
+```C
+for (i = 0; i < 10; ++i) {
+  ...
+}
+```
+
+```ASM
+    sub.b   r0l,r0l
+for_start:
+    cmp.b   #10,r0l     ; A = r0h, B = 10
+    bge     for_end     ; IF A >= B THEN GOTO for_end
+    ...
+    inc.b   r0l
+    bra     for_start
+for_end:
+```
