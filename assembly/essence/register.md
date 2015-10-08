@@ -2,7 +2,7 @@
 layout: assembly
 ---
 <style>rect,line,path{ fill: rgba(1,1,1,0.1); stroke: black; }
-  rect:hover{fill: rgba(0,0,255,0.2); }</style>
+  rect:hover{fill: rgba(255,255,0,0.2); }</style>
 # レジスタ
 ここでは、H8/300H シリーズのレジスタの構成と使用法について説明する
 
