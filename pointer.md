@@ -1,6 +1,10 @@
 ---
 layout: page
 ---
+<style>
+  .np { color: #096; }
+  .ap { color: #690; }
+</style>
 # pointer
 
 1. サンプルプログラムを打ち込む
@@ -58,13 +62,12 @@ array of int a: addr = 0xbf86f784 (size:12)
 n_ptr = 0xbf86f798 : addr = 0xbf86f79c (size:4)
 ```
 
-| address  | value | size |
-|:---------|------:|------|
-|0xbf86f798|100|4|
-|0xbf86f790|3.141592|8|
-|0xbf86f784|1024|4|
-|0xbf86f788|2048|4|
-|0xbf86f78c|2048|4|
-|0xbf86f79c|0xbf86f798|4|
-
-
+| identifier | address  | value | size |
+|------------|:---------|------:|-----:|
+|a           |0x<span class=ap>bf86f784</span>|0x<span class=ap>bf86f784</span>| 12|
+|a[0]        |0x<span class=ap>bf86f784</span>|1024|4|
+|a[1]        |0xbf86f788|2048|4|
+|a[2]        |0xbf86f78c|4906|4|
+|x           |0xbf86f790|3.141592|8|
+|n           |0x<span class=np>bf86f798</span>|100|4|
+|n_prt       |0xbf86f79c|0x<span class=np>bf86f798</span>|4|
